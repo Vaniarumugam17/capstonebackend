@@ -1,0 +1,44 @@
+{
+  "name": "capstonebackend",
+  "version": "1.0.0",
+  "description": "Backend for a basic music player",
+  "scripts": {
+    "test": "jest",
+    "coverage": "jest --coverage",
+    "lint": "eslint .",
+    "start": "node src/server.js"
+  },
+  "devDependencies": {
+    "eslint": "^5.15.1",
+    "jest": "^24.3.1"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "googleapis": "^27.0.0",
+    "passport": "^0.4.1",
+    "passport-google-oauth2": "^0.2.0",
+    "socket.io": "^2.2.0"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "text",
+      "clover",
+      "html"
+    ],
+    "collectCoverageFrom": [
+      "**/*.js",
+      "!**/*.test.js",
+      "!**/node_modules/**",
+      "!**/coverage/**"
+    ],
+    "watchPathIgnorePatterns": [
+      "node_modules"
+    ]
+  }
+}
